@@ -1,0 +1,15 @@
+$success: #0f5223;
+$active-bg-custom: #004a77;
+
+$nav-link-font-size: 0.7rem;
+
+@mixin link-active-custom {
+  background-color: $active-bg-custom;
+}
+
+.navbar-nav .nav-link.active i,
+.navbar-nav .nav-link.active span {
+  @include link-active-custom();
+}
+
+@import '../bootstrap/scss/bootstrap.scss';
