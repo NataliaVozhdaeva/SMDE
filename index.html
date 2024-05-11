@@ -34,65 +34,71 @@
             </form>
             <ul class="navbar-nav flex-column row-gap-2">
               <li class="nav-item">
-                <a class="nav-link d-flex flex-column text-center w-75 mx-auto fw-bold row-gap-2 active" aria-current="page" href="#"
-                  ><i class="cib-material-design fs-4 fw-bold mb-1 p-1 rounded-4"></i>Home</a
+                <a class="nav-link d-flex flex-column text-center w-75 mx-auto row-gap-2 sr-only active" aria-current="page" href="#home"
+                  ><i class="cib-material-design fs-4 mb-1 p-1 rounded-4"></i>Home</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link d-flex flex-column row-gap-2 fw-bold text-center" href="#">
+                <a class="nav-link d-flex flex-column row-gap-2 text-center" aria-current="page" href="#started">
                   <span class="material-symbols-outlined w-75 mx-auto p-1 rounded-4"> apps </span>
                   Get started
                 </a>
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link dropdown-toggle d-flex flex-column row-gap-2 text-center fw-bold"
+                  class="nav-link dropdown-toggle d-flex flex-column row-gap-2 mx-4 text-center"
                   data-bs-toggle="dropdown"
                   data-bs-auto-close="inside"
                   aria-expanded="false">
                   <span class="material-symbols-outlined w-75 mx-auto p-1 rounded-4"> code </span>
                   Develop
                 </a>
-                <ul class="dropdown-menu vh-100 px-3 py-4" role="menu">
-                  <li class="mb-1"><a class="dropdown-item py-3 px-4 rounded-pill" href="#">Develop overview</a></li>
-                  <li class="dropdown mb-1">
-                    <a
-                      class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center py-3 px-4 rounded-pill"
-                      data-bs-toggle="dropdown"
-                      data-bs-auto-close="inside"
-                      aria-expanded="false"
-                      >Android</a
+                <ul class="dropdown-menu vh-100 py-4" role="menu">
+                  <li class="">
+                    <a class="nav-link dropdown-item d-block w-100" href="#develop"
+                      ><span class="d-block w-100 px-5 py-3 rounded-pill">Develop overview</span></a
                     >
-                    <ul class="dropdown-menu" role="menu">
-                      <li>
-                        <a class="dropdown-item py-3 px-4">MDC-Android</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item py-3 px-4">Jetpack compouse</a>
-                      </li>
-                    </ul>
                   </li>
-                  <li class="mb-1"><a class="dropdown-item py-3 px-4 rounded-pill" href="#">Flutter</a></li>
-                  <li class="mb-1"><a class="dropdown-item py-3 px-4 rounded-pill" href="#">Web</a></li>
+                  <li class="">
+                    <details class="dropdown-item nav-link">
+                      <summary class="">
+                        <span class="d-flex justify-content-between px-5 py-3 rounded-pill">Android</span>
+                      </summary>
+                      <ul class="navbar-nav d-flex flex-column gap-3 mt-4">
+                        <li class="nav-item ps-5">
+                          <a class="nav-link" href="#develop-android"><span class="px-4 py-3 rounded-5"> MDC-Android</span></a>
+                        </li>
+                        <li class="nav-item ps-5">
+                          <a class="nav-link" href="#jetpack-compouse"><span class="px-4 py-3 rounded-5">Jetpack compouse</span></a>
+                        </li>
+                      </ul>
+                    </details>
+                  </li>
+                  <li class="">
+                    <a class="dropdown-item nav-link" href="#flutter"><span class="d-block w-100 px-5 py-3 rounded-pill">Flutter</span></a>
+                  </li>
+                  <li class="">
+                    <a class="dropdown-item nav-link" href="#web"><span class="d-block w-100 px-5 py-3 rounded-pill">Web</span></a>
+                  </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link d-flex flex-column row-gap-2 text-center fw-bold">
+                <a class="nav-link d-flex flex-column row-gap-2 text-center" href="#home">
                   <span class="material-symbols-outlined w-75 mx-auto p-1 rounded-4"> book </span>Foundations</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link d-flex flex-column row-gap-2 text-center fw-bold">
+                <a class="nav-link d-flex flex-column row-gap-2 text-center" href="#home">
                   <span class="material-symbols-outlined w-75 mx-auto p-1 rounded-4"> palette </span>Styles</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link d-flex flex-column row-gap-2 text-center fw-bold">
+                <a class="nav-link d-flex flex-column row-gap-2 text-center" href="#home">
                   <span class="material-symbols-outlined w-75 mx-auto p-1 rounded-4"> add_circle </span>Components</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link d-flex flex-column row-gap-2 text-center fw-bold" href="#">
+                <a class="nav-link d-flex flex-column row-gap-2 text-center" href="#home">
                   <span class="material-symbols-outlined w-75 mx-auto p-1 rounded-4"> pages </span>Blog</a
                 >
               </li>
@@ -105,7 +111,7 @@
           </div>
         </div>
       </nav>
-      <div class="grid gap-3">
+      <div class="grid gap-3 bg-secondary-subtle">
         <div class="p-2 g-col-6">Grid item 1</div>
         <div class="p-2 g-col-6">Grid item 2</div>
         <div class="p-2 g-col-6">Grid item 3</div>

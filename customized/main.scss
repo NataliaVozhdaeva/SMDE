@@ -1,7 +1,8 @@
 $success: #0f5223;
 $active-bg-custom: #004a77;
 
-$nav-link-font-size: 0.7rem;
+$nav-link-font-size: 0.75rem;
+$nav-link-font-weight: bold;
 
 @mixin link-active-custom {
   background-color: $active-bg-custom;
@@ -12,6 +13,10 @@ $nav-link-font-size: 0.7rem;
   left: 100%;
 }
 
+@mixin zero-padding {
+  padding: 0;
+}
+
 @import '../bootstrap/scss/bootstrap.scss';
 
 .navbar-nav .nav-link.active i,
@@ -19,8 +24,9 @@ $nav-link-font-size: 0.7rem;
   @include link-active-custom();
 }
 
-.navbar-nav .nav-link:hover span,
-.btn:hover {
+.navbar-nav .nav-link:hover span:hover,
+.btn:hover,
+.dropdown-item span:hover {
   background-color: $gray-800;
 }
 
@@ -48,4 +54,27 @@ $nav-link-font-size: 0.7rem;
   position: absolute;
   display: block;
   @include dropdown-right();
+}
+
+details {
+  @include zero-padding();
+}
+
+summary {
+  list-style: none;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary span::after {
+  content: '►';
+}
+details[open] summary span:after {
+  transform: rotate(90deg);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: $gray-900;
 }
