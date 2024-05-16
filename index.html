@@ -122,6 +122,7 @@
         </div>
         <div class="embed-responsive ratio ratio-16x9 w-50 bg-dark rounded-5">
           <video
+            id="hero-video"
             class="object-fit-cover align-middle rounded-5"
             loading="lazy"
             width="100%"
@@ -133,9 +134,11 @@
             <source
               src="https://kstatic.googleusercontent.com/files/65da8f0326427a8e71bfa678348f3fa1a4bb1660e0b013591eb3bfd9df455bd5a3334249de61229029be7d2fd7cf18d4e143728b7e0702b6bde6251a9c64511a" />
           </video>
-          <div class="position-absolute top-0 start-0">
-            <span class="material-symbols-outlined position-absolute bottom-2 end-2 fs-1">pause_circle</span>
-            <!-- <span class="material-symbols-outlined">               play_circle               </span> -->
+          <div class="position-absolute top-0 start-0" data-video="videoBtns">
+            <span class="material-symbols-outlined position-absolute bottom-2 end-2 fs-1" role="button" data-video="pause">pause_circle</span>
+            <span class="invisible material-symbols-outlined position-absolute bottom-2 end-2 fs-1" role="button" data-video="play">
+              play_circle
+            </span>
           </div>
         </div>
       </header>
