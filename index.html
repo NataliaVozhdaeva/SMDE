@@ -8,11 +8,13 @@
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/@coreui/icons/css/all.min.css" />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
+
   <body data-bs-theme="dark" class="m-0 d-flex bg-secondary-subtle">
-    <aside class="w-auto">
+    <aside class="w-auto psticky-start">
       <nav class="navbar navbar-expand-sm bg-dark">
         <div class="container-fluid p-0">
           <button
@@ -111,11 +113,11 @@
       </nav>
     </aside>
     <div class="w-100 py-2">
-      <header class="d-flex gap-2 px-4">
+      <header class="d-flex gap-2 px-4 mb-5 text text-body-emphasis">
         <div class="d-flex flex-column justify-content-center align-items-start w-50 p-5 bg-dark rounded-5">
-          <h1 class="fs-0 text-body-emphasis">Material Design</h1>
-          <p class="fs-5 text text-body-emphasis">
-            Material 3 is the latest version of Google’s open-source design system. <br />
+          <h1 class="fs-0">Material Design</h1>
+          <p class="fs-5">
+            Material 3 is the latest version of Google's open-source design system. <br />
             Design and build beautiful, usable products with Material 3.
           </p>
           <button class="btn btn-primary rounded-pill px-5 py-4 fs-4">Get started</button>
@@ -142,13 +144,33 @@
           </div>
         </div>
       </header>
-      <main class="d-flex">
-        <!-- <div class="grid gap-3">
-          <div class="p-2 g-col-6">Grid item 1</div>
-          <div class="p-2 g-col-6">Grid item 2</div>
-          <div class="p-2 g-col-6">Grid item 3</div>
-          <div class="p-2 g-col-6">Grid item 4</div>
-        </div> -->
+      <main class="d-flex text text-body-emphasis">
+        <section class="w-75 mx-auto mt-5 px-5">
+          <h2 class="h1 mb-4">News & launches</h2>
+          <div class="row d-flex gap-2">
+            <div class="card col p-0 text text-body-emphasis bg-dark rounded-4 border-0">
+              <img src="./assets/img/MD.png" class="card-img-top w-100 rounded-4" alt="Material Design image" />
+              <div class="card-body">
+                <h4 class="card-title">Material Design at Google I/O</h4>
+                <p class="card-text">See the full list of Material talks and tutorials launching at I/O 2024</p>
+              </div>
+            </div>
+            <div class="card col p-0 text text-body-emphasis bg-dark rounded-4 border-0">
+              <img src="./assets/img/google-fonts.png" class="card-img-top rounded-4" alt="Material Design image" />
+              <div class="card-body">
+                <h4 class="card-title">How to get Google Fonts</h4>
+                <p class="card-text">New API updates and website upgrades make font integration easier than ever</p>
+              </div>
+            </div>
+            <div class="card col p-0 text text-body-emphasis bg-dark rounded-4 border-0">
+              <img src="./assets/img/figma.png" class="card-img-top rounded-4" alt="Material Design image" />
+              <div class="card-body">
+                <h4 class="card-title">Figma design kit</h4>
+                <p class="card-text">Start designing and prototyping with the complete M3 library of ready-made components</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <footer></footer>
     </div>
