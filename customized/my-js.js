@@ -6,7 +6,7 @@ location.hash = 'home';
 document.querySelector('a[href="#home"]').classList.add('active');
 
 menuItems.forEach((el) => {
-  el.addEventListener('click', function appearModal() {
+  el.addEventListener('click', function activeClassHandler() {
     menuItems.forEach((el) => el.classList.remove('active'));
     setTimeout(function () {
       for (let i = 0; i < menuItems.length; i++) {

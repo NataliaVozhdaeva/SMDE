@@ -8,8 +8,11 @@ $nav-link-font-weight: bold;
 $list-group-bg: none;
 $list-group-border-color: none;
 
+$card-hover: #45455a;
+$link-decoration: none;
+
 @mixin link-active-custom {
-  background-color: $active-bg-custom;
+  background-color: $active-bg-custom !important;
 }
 
 @mixin dropdown-right {
@@ -23,20 +26,37 @@ $list-group-border-color: none;
 
 @import '../bootstrap/scss/bootstrap.scss';
 
-.navbar-nav .nav-link.active i,
-.navbar-nav .nav-link.active span {
+.navbar-nav .nav-link.active span,
+.nav-link.active:hover span {
   @include link-active-custom();
 }
 
-.navbar-nav .nav-link:hover span:hover,
-.btn:hover,
-.dropdown-item span:hover {
+.navbar-nav .nav-link:hover span,
+.navbar-nav .nav-link span:hover,
+.dropdown-item span:hover,
+.btn:hover {
   background-color: $gray-800;
 }
 
-.btn,
-.btn:hover {
+nav .btn,
+nav .btn:hover {
+  position: relative;
   color: $gray-500;
+}
+
+nav .btn:hover {
+  font-weight: bold;
+  &::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 3px);
+    left: calc(50% - 3px);
+    width: 6px;
+    height: 6px;
+
+    background-color: $gray-500;
+    border-radius: 50%;
+  }
 }
 
 .navbar .btn:hover {
@@ -94,4 +114,21 @@ h1.fs-0 {
 
 .btn-primary:hover {
   background-color: lighten($primary, 3%);
+}
+
+.bg-dark.card:hover {
+  background-color: $card-hover !important;
+  cursor: pointer;
+}
+
+.link-light,
+.link-primar {
+  text-decoration: none;
+}
+
+.link-light:hover,
+.link-primary:hover {
+  color: $white !important;
+  text-decoration: underline !important;
+  text-decoration-color: $white !important;
 }
