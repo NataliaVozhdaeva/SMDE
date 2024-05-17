@@ -5,6 +5,9 @@ $primary: #9f86ff;
 $nav-link-font-size: 0.75rem;
 $nav-link-font-weight: bold;
 
+$list-group-bg: none;
+$list-group-border-color: none;
+
 @mixin link-active-custom {
   background-color: $active-bg-custom;
 }
@@ -29,6 +32,11 @@ $nav-link-font-weight: bold;
 .btn:hover,
 .dropdown-item span:hover {
   background-color: $gray-800;
+}
+
+.btn,
+.btn:hover {
+  color: $gray-500;
 }
 
 .navbar .btn:hover {
