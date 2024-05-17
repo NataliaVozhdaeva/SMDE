@@ -14,8 +14,8 @@
   </head>
 
   <body data-bs-theme="dark" class="m-0 d-flex bg-secondary-subtle">
-    <aside class="w-auto psticky-start">
-      <nav class="navbar navbar-expand-sm bg-dark">
+    <aside class="w-auto">
+      <nav class="navbar-expand-sm sticky-top w-auto bg-dark">
         <div class="container-fluid p-0">
           <button
             class="navbar-toggler"
@@ -112,8 +112,8 @@
         </div>
       </nav>
     </aside>
-    <div class="w-100 py-2">
-      <header class="d-flex gap-2 px-4 mb-5 text text-body-emphasis">
+    <div class="w-100">
+      <header class="d-flex gap-2 px-4 py-2 mb-5 text text-body-emphasis">
         <div class="d-flex flex-column justify-content-center align-items-start w-50 p-5 bg-dark rounded-5">
           <h1 class="fs-0">Material Design</h1>
           <p class="fs-5">
@@ -144,29 +144,80 @@
           </div>
         </div>
       </header>
-      <main class="d-flex text text-body-emphasis">
-        <section class="w-75 mx-auto mt-5 px-5">
+      <main class="d-flex flex-column text text-body-emphasis">
+        <section class="w-75 mx-auto my-5 px-5">
           <h2 class="h1 mb-4">News & launches</h2>
           <div class="row d-flex gap-2">
             <div class="card col p-0 text text-body-emphasis bg-dark rounded-4 border-0">
               <img src="./assets/img/MD.png" class="card-img-top w-100 rounded-4" alt="Material Design image" />
-              <div class="card-body">
+              <div class="card-body px-4 pb-5">
                 <h4 class="card-title">Material Design at Google I/O</h4>
                 <p class="card-text">See the full list of Material talks and tutorials launching at I/O 2024</p>
               </div>
             </div>
             <div class="card col p-0 text text-body-emphasis bg-dark rounded-4 border-0">
               <img src="./assets/img/google-fonts.png" class="card-img-top rounded-4" alt="Material Design image" />
-              <div class="card-body">
+              <div class="card-body px-4 pb-5">
                 <h4 class="card-title">How to get Google Fonts</h4>
                 <p class="card-text">New API updates and website upgrades make font integration easier than ever</p>
               </div>
             </div>
             <div class="card col p-0 text text-body-emphasis bg-dark rounded-4 border-0">
               <img src="./assets/img/figma.png" class="card-img-top rounded-4" alt="Material Design image" />
-              <div class="card-body">
+              <div class="card-body px-4 pb-5">
                 <h4 class="card-title">Figma design kit</h4>
                 <p class="card-text">Start designing and prototyping with the complete M3 library of ready-made components</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="w-75 mx-auto mt-5 px-5">
+          <h2 class="h1 mb-4">Design system updates</h2>
+          <div class="d-flex flex-column gap-2">
+            <div class="row d-flex gap-2">
+              <div class="card col p-0 text text-body-emphasis bg-dark rounded-4 border-0">
+                <img src="./assets/img/content-design.png" class="card-img-top w-100 rounded-4" alt="Material Design image" />
+                <div class="card-body px-4 pb-5">
+                  <h4 class="card-title">Content design</h4>
+                  <p class="card-text">Guidance and best practices for UX writing and information design</p>
+                </div>
+              </div>
+              <div class="card col p-0 text text-body-emphasis bg-dark rounded-4 border-0">
+                <img src="./assets/img/carousel.png" class="card-img-top rounded-4" alt="Material Design image" />
+                <div class="card-body px-4 pb-5">
+                  <h4 class="card-title">New component: Carousel</h4>
+                  <p class="card-text">An expressive new way to display a horizontally scrolling collection of content</p>
+                </div>
+              </div>
+              <div class="card col p-0 text text-body-emphasis bg-dark rounded-4 border-0">
+                <img src="./assets/img/jetpack.png" class="card-img-top rounded-4" alt="Material Design image" />
+                <div class="card-body px-4 pb-5">
+                  <h4 class="card-title">M3 for Jetpack Compose</h4>
+                  <p class="card-text">With the latest stable release, use Jetpack Compose to build a complete M3 Android app</p>
+                </div>
+              </div>
+            </div>
+            <div class="row d-flex gap-2">
+              <div class="card col p-0 text text-body-emphasis bg-dark rounded-4 border-0">
+                <img src="./assets/img/theme.png" class="card-img-top w-100 rounded-4" alt="Material Design image" />
+                <div class="card-body px-4 pb-5">
+                  <h4 class="card-title">Material Theme Builder</h4>
+                  <p class="card-text">Easily migrate or get started with the M3 color system and dynamic color</p>
+                </div>
+              </div>
+              <div class="card col p-0 text text-body-emphasis bg-dark rounded-4 border-0">
+                <img src="./assets/img/color-system.png" class="card-img-top rounded-4" alt="Material Design image" />
+                <div class="card-body px-4 pb-5">
+                  <h4 class="card-title">How the color system works</h4>
+                  <p class="card-text">From color roles and accessible tone pairs to dynamic color, learn how color works in Material</p>
+                </div>
+              </div>
+              <div class="card col p-0 text text-body-emphasis bg-dark rounded-4 border-0">
+                <img src="./assets/img/icons.png" class="card-img-top rounded-4" alt="Material Design image" />
+                <div class="card-body px-4 pb-5">
+                  <h4 class="card-title">Using Material icons</h4>
+                  <p class="card-text">Learn how to use and customize the latest system icons for your UI</p>
+                </div>
               </div>
             </div>
           </div>
