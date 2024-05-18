@@ -24,10 +24,9 @@ menuItems.forEach((el) => {
 const videoBtnsContainer = document.querySelector('div[data-video="videoBtns"]');
 const video = document.querySelector('#hero-video');
 
-videoBtnsContainer.addEventListener('click', function VideoToggler(e) {
+videoBtnsContainer.addEventListener('click', function videoToggler(e) {
   const btnPause = videoBtnsContainer.querySelector('span[data-video="pause"]');
   const btnPlay = videoBtnsContainer.querySelector('span[data-video="play"]');
-  // console.log(e.target.dataset.video);
 
   if (e.target.dataset.video === 'pause') {
     video.pause();
@@ -37,5 +36,28 @@ videoBtnsContainer.addEventListener('click', function VideoToggler(e) {
     video.play();
     btnPause.classList.remove('invisible');
     btnPlay.classList.add('invisible');
+  }
+});
+
+//dark-mode
+
+const themeBtn = document.querySelector('button[data-theme="theme"]');
+
+// console.log(themeBtn);
+
+themeBtn.addEventListener('click', function themeToggler() {
+  const currentTheme = themeBtn.querySelector('span:not(.d-none)');
+  const nextTheme = themeBtn.querySelector('span.d-none');
+
+  if (currentTheme.dataset.theme === 'toDark') {
+    // console.log('toDark');
+    document.querySelector('body').setAttribute('data-bs-theme', 'dark');
+    currentTheme.classList.toggle('d-none');
+    nextTheme.classList.toggle('d-none');
+  } else {
+    // console.log('toLight');
+    document.querySelector('body').setAttribute('data-bs-theme', 'light');
+    currentTheme.classList.toggle('d-none');
+    nextTheme.classList.toggle('d-none');
   }
 });

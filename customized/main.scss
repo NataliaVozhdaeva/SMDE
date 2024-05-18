@@ -1,18 +1,25 @@
-$success: #553f5d;
-$active-bg-custom: #45455a;
-$primary: #9f86ff;
+// $success: #553f5d;
+// $active-bg-custom: #45455a;
+// $primary: #9f86ff;
+// $card-hover: #45455a;
+// $bg-dark: #f2ecee;
 
-$nav-link-font-size: 0.75rem;
-$nav-link-font-weight: bold;
+$nav-link-font-size: 0.7rem;
 
 $list-group-bg: none;
 $list-group-border-color: none;
 
-$card-hover: #45455a;
 $link-decoration: none;
 
+$primary: #6442d6;
+$secondary-bg-subtle: #f2ecee;
+$success: #f1d3f9;
+$active-bg-custom: #dcdaf5;
+$button-bg-hover: darken($secondary-bg-subtle, 5%);
+
 @mixin link-active-custom {
-  background-color: $active-bg-custom !important;
+  font-weight: bold;
+  font-variation-settings: 'FILL' 1, 'wght' 600, 'opsz' 24;
 }
 
 @mixin dropdown-right {
@@ -28,51 +35,33 @@ $link-decoration: none;
 
 .navbar-nav .nav-link.active span,
 .nav-link.active:hover span {
+  background-color: $active-bg-custom;
+}
+
+.navbar-nav .nav-link.active {
   @include link-active-custom();
 }
 
-.navbar-nav .nav-link:hover span,
-.navbar-nav .nav-link span:hover,
-.dropdown-item span:hover,
-.btn:hover {
-  background-color: $gray-800;
+.navbar-nav .nav-link:not(.active):hover span,
+.navbar-nav .nav-link:not(.active) span:hover,
+.dropdown-item span:hover {
+  background-color: $button-bg-hover;
 }
 
-nav .btn,
-nav .btn:hover {
+nav .btn {
   position: relative;
-  color: $gray-500;
+  // color: $gray-500;
 }
 
 nav .btn:hover {
   font-weight: bold;
-  &::before {
-    content: '';
-    position: absolute;
-    top: calc(50% - 3px);
-    left: calc(50% - 3px);
-    width: 6px;
-    height: 6px;
-
-    background-color: $gray-500;
-    border-radius: 50%;
-  }
+  font-variation-settings: 'FILL' 1, 'wght' 600, 'opsz' 24;
+  color: $gray-700;
+  background-color: $button-bg-hover;
 }
 
-.navbar .btn:hover {
-  position: relative;
-  color: $gray-400;
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: calc(50% - 4px);
-    left: calc(50% - 4px);
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: $gray-400;
-  }
+#logo {
+  stroke: $black;
 }
 
 .nav-item > .dropdown-toggle::after {
@@ -103,6 +92,11 @@ details[open] summary span:after {
   transform: rotate(90deg);
 }
 
+.dropdown-item {
+  font-size: $nav-link-font-size;
+  font-weight: $nav-link-font-weight;
+}
+
 .dropdown-item:hover,
 .dropdown-item:focus {
   background-color: $gray-900;
@@ -116,19 +110,29 @@ h1.fs-0 {
   background-color: lighten($primary, 3%);
 }
 
-.bg-dark.card:hover {
-  background-color: $card-hover !important;
+.card:hover {
+  background-color: $active-bg-custom !important;
   cursor: pointer;
 }
+
+// .bg-dark.card:hover {
+//   background-color: $card-hover !important;
+//   cursor: pointer;
+// }
 
 .link-light,
 .link-primar {
   text-decoration: none;
 }
 
-.link-light:hover,
-.link-primary:hover {
-  color: $white !important;
-  text-decoration: underline !important;
-  text-decoration-color: $white !important;
+// .link-light:hover,
+// .link-primary:hover {
+//   color: $white !important;
+//   text-decoration: underline !important;
+//   text-decoration-color: $white !important;
+// }
+
+.list-group-item:hover {
+  text-decoration: underline;
+  text-decoration-color: currentColor;
 }
