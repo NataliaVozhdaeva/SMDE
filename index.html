@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
-  <body class="m-0 d-flex">
+  <body class="m-0 d-flex bg-primary">
     <aside class="w-auto">
-      <nav class="navbar-expand-sm sticky-top w-auto bg-secondary-subtle">
+      <nav class="navbar-expand-sm sticky-top w-auto bg-secondary">
         <div class="container-fluid p-0">
           <button
             class="navbar-toggler"
@@ -30,23 +30,23 @@
           <div class="collapse navbar-collapse d-flex flex-column justify-content-between row-gap-3 pt-3 vh-100" id="navbarSupportedContent">
             <form class="d-flex" role="search">
               <!-- <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск" /> -->
-              <button class="btn d-flex justify-content-center p-2 fs-6 bg-success rounded-4">
+              <button class="btn d-flex justify-content-center p-2 fs-6 bg-info rounded-4">
                 <span class="material-symbols-outlined fs-2"> search </span>
               </button>
             </form>
-            <ul class="navbar-nav flex-column row-gap-2 px-2">
-              <li class="nav-item">
+            <ul class="navbar-nav flex-column row-gap-2">
+              <li class="nav-item px-2">
                 <a class="nav-link d-flex flex-column text-center w-75 mx-auto row-gap-2 sr-only" aria-current="page" href="#home"
                   ><span class="cib-material-design fs-4 mb-1 p-1 rounded-4"></span>Home</a
                 >
               </li>
-              <li class="nav-item">
+              <li class="nav-item px-2">
                 <a class="nav-link d-flex flex-column row-gap-2 text-center" href="#started">
                   <span class="material-symbols-outlined w-75 mx-auto p-1 rounded-4"> apps </span>
                   Get started
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item px-2">
                 <a
                   class="nav-link dropdown-toggle d-flex flex-column row-gap-2 text-center"
                   data-bs-auto-close="inside"
@@ -55,56 +55,60 @@
                   <span class="material-symbols-outlined w-75 mx-auto p-1 rounded-4"> code </span>
                   Develop
                 </a>
-                <ul class="dropdown-menu vh-100 py-4 px-2" role="menu">
-                  <li class="">
-                    <a class="dropdown-item d-block w-100 px-0"><span class="d-block w-100 px-5 py-3 rounded-pill">Develop overview</span></a>
+                <ul class="dropdown-menu vh-100 py-4 px-2 bg-secondary" role="menu">
+                  <li class="bg-secondary">
+                    <a class="dropdown-item d-block w-100 px-0 bg-secondary"
+                      ><span class="d-block w-100 px-5 py-3 rounded-pill">Develop overview</span></a
+                    >
                   </li>
-                  <li class="">
-                    <details class="dropdown-item px-0">
-                      <a class="nav-link" href="#android"></a>
-                      <summary class="">
+                  <li class="bg-secondary">
+                    <details class="dropdown-item px-0 py-0">
+                      <a class="nav-link bg-secondary" href="#android"></a>
+                      <summary class="bg-secondary">
                         <span class="d-flex justify-content-between px-5 py-3 rounded-pill">Android</span>
                       </summary>
-                      <ul class="navbar-nav d-flex flex-column gap-3 mt-4">
-                        <li class="nav-item ps-5">
-                          <a class="nav-link" href="#MDC-android"><span class="px-4 py-3 rounded-5"> MDC-Android</span></a>
+                      <ul class="navbar-nav d-flex flex-column gap-3 my-0 bg-secondary">
+                        <li class="nav-item px-2 ps-5 bg-secondary">
+                          <a class="nav-link bg-secondary" href="#MDC-android"><span class="px-4 py-3 rounded-5"> MDC-Android</span></a>
                         </li>
-                        <li class="nav-item ps-5">
-                          <a class="nav-link" href="#jetpack-compouse"><span class="px-4 py-3 rounded-5">Jetpack compouse</span></a>
+                        <li class="nav-item px-2 ps-5 bg-secondary">
+                          <a class="nav-link bg-secondary" href="#jetpack-compouse"><span class="px-4 py-3 rounded-5">Jetpack compouse</span></a>
                         </li>
                       </ul>
                     </details>
                   </li>
-                  <li class="">
-                    <a class="dropdown-item nav-link" href="#flutter"><span class="d-block w-100 px-5 py-3 rounded-pill">Flutter</span></a>
+                  <li class="bg-secondary">
+                    <a class="dropdown-item nav-link bg-secondary" href="#flutter"
+                      ><span class="d-block w-100 px-5 py-3 rounded-pill">Flutter</span></a
+                    >
                   </li>
-                  <li class="">
-                    <a class="dropdown-item nav-link" href="#web"><span class="d-block w-100 px-5 py-3 rounded-pill">Web</span></a>
+                  <li class="bg-secondary">
+                    <a class="dropdown-item nav-link bg-secondary" href="#web"><span class="d-block w-100 px-5 py-3 rounded-pill">Web</span></a>
                   </li>
                 </ul>
               </li>
-              <li class="nav-item">
+              <li class="nav-item px-2">
                 <a class="nav-link d-flex flex-column row-gap-2 text-center" href="#foundations">
                   <span class="material-symbols-outlined w-75 mx-auto p-1 rounded-4"> book </span>Foundations</a
                 >
               </li>
-              <li class="nav-item">
+              <li class="nav-item px-2">
                 <a class="nav-link d-flex flex-column row-gap-2 text-center" href="#styles">
                   <span class="material-symbols-outlined w-75 mx-auto p-1 rounded-4"> palette </span>Styles</a
                 >
               </li>
-              <li class="nav-item">
+              <li class="nav-item px-2">
                 <a class="nav-link d-flex flex-column row-gap-2 text-center" href="#components">
                   <span class="material-symbols-outlined w-75 mx-auto p-1 rounded-4"> add_circle </span>Components</a
                 >
               </li>
-              <li class="nav-item">
+              <li class="nav-item px-2">
                 <a class="nav-link d-flex flex-column row-gap-2 text-center" href="#pages">
                   <span class="material-symbols-outlined w-75 mx-auto p-1 rounded-4"> pages </span>Blog</a
                 >
               </li>
             </ul>
-            <button class="btn btn-outline-secondary mt-auto mb-3 px-2 py-2 pb-1 rounded-circle" data-theme="theme">
+            <button class="btn btn-outline-success mt-auto mb-3 px-2 py-2 pb-1 rounded-circle" data-theme="theme">
               <span class="material-symbols-outlined" data-theme="toDark"> dark_mode </span>
               <span class="material-symbols-outlined d-none" data-theme="toLight"> light_mode </span>
             </button>
@@ -114,13 +118,13 @@
     </aside>
     <div class="w-100">
       <header class="d-flex gap-2 px-4 py-2 mb-5 text text-body-emphasis">
-        <div class="card d-flex flex-column justify-content-center align-items-start bg-secondary-subtle w-50 p-5 rounded-5 border-0">
+        <div class="d-flex flex-column justify-content-center align-items-start bg-secondary w-50 p-5 rounded-5">
           <h1 class="fs-0">Material Design</h1>
           <p class="fs-5">
             Material 3 is the latest version of Google's open-source design system. <br />
             Design and build beautiful, usable products with Material 3.
           </p>
-          <button class="btn btn-primary rounded-pill px-5 py-4 fs-4">Get started</button>
+          <button class="btn btn-warning text-primary rounded-pill px-5 py-4 fs-4">Get started</button>
         </div>
         <div class="embed-responsive ratio ratio-16x9 w-50 rounded-5">
           <video
@@ -156,21 +160,21 @@
         <section class="w-75 mx-auto my-5 px-5">
           <h2 class="h1 mb-4">News & launches</h2>
           <div class="row d-flex gap-2">
-            <div class="card col p-0 text text-body-emphasis bg-secondary-subtle rounded-4 border-0">
+            <div class="card col p-0 text text-body-emphasis bg-secondary rounded-4 border-0">
               <img src="./assets/img/MD.png" class="card-img-top w-100 rounded-4" alt="Material Design image" />
               <div class="card-body px-4 pb-5">
                 <h4 class="card-title">Material Design at Google I/O</h4>
                 <p class="card-text">See the full list of Material talks and tutorials launching at I/O 2024</p>
               </div>
             </div>
-            <div class="card col p-0 text text-body-emphasis bg-secondary-subtle rounded-4 border-0">
+            <div class="card col p-0 text text-body-emphasis bg-secondary rounded-4 border-0">
               <img src="./assets/img/google-fonts.png" class="card-img-top rounded-4" alt="Material Design image" />
               <div class="card-body px-4 pb-5">
                 <h4 class="card-title">How to get Google Fonts</h4>
                 <p class="card-text">New API updates and website upgrades make font integration easier than ever</p>
               </div>
             </div>
-            <div class="card col p-0 text text-body-emphasis bg-secondary-subtle rounded-4 border-0">
+            <div class="card col p-0 text text-body-emphasis bg-secondary rounded-4 border-0">
               <img src="./assets/img/figma.png" class="card-img-top rounded-4" alt="Material Design image" />
               <div class="card-body px-4 pb-5">
                 <h4 class="card-title">Figma design kit</h4>
@@ -183,21 +187,21 @@
           <h2 class="h1 mb-4">Design system updates</h2>
           <div class="d-flex flex-column gap-2">
             <div class="row d-flex gap-2">
-              <div class="card col p-0 text text-body-emphasis bg-secondary-subtle rounded-4 border-0">
+              <div class="card col p-0 text text-body-emphasis bg-secondary rounded-4 border-0">
                 <img src="./assets/img/content-design.png" class="card-img-top w-100 rounded-4" alt="Material Design image" />
                 <div class="card-body px-4 pb-5">
                   <h4 class="card-title">Content design</h4>
                   <p class="card-text">Guidance and best practices for UX writing and information design</p>
                 </div>
               </div>
-              <div class="card col p-0 text text-body-emphasis bg-secondary-subtle rounded-4 border-0">
+              <div class="card col p-0 text text-body-emphasis bg-secondary rounded-4 border-0">
                 <img src="./assets/img/carousel.png" class="card-img-top rounded-4" alt="Material Design image" />
                 <div class="card-body px-4 pb-5">
                   <h4 class="card-title">New component: Carousel</h4>
                   <p class="card-text">An expressive new way to display a horizontally scrolling collection of content</p>
                 </div>
               </div>
-              <div class="card col p-0 text text-body-emphasis bg-secondary-subtle rounded-4 border-0">
+              <div class="card col p-0 text text-body-emphasis bg-secondary rounded-4 border-0">
                 <img src="./assets/img/jetpack.png" class="card-img-top rounded-4" alt="Material Design image" />
                 <div class="card-body px-4 pb-5">
                   <h4 class="card-title">M3 for Jetpack Compose</h4>
@@ -206,21 +210,21 @@
               </div>
             </div>
             <div class="row d-flex gap-2">
-              <div class="card col p-0 text text-body-emphasis bg-secondary-subtle rounded-4 border-0">
+              <div class="card col p-0 text text-body-emphasis bg-secondary rounded-4 border-0">
                 <img src="./assets/img/theme.png" class="card-img-top w-100 rounded-4" alt="Material Design image" />
                 <div class="card-body px-4 pb-5">
                   <h4 class="card-title">Material Theme Builder</h4>
                   <p class="card-text">Easily migrate or get started with the M3 color system and dynamic color</p>
                 </div>
               </div>
-              <div class="card col p-0 text text-body-emphasis bg-secondary-subtle rounded-4 border-0">
+              <div class="card col p-0 text text-body-emphasis bg-secondary rounded-4 border-0">
                 <img src="./assets/img/color-system.png" class="card-img-top rounded-4" alt="Material Design image" />
                 <div class="card-body px-4 pb-5">
                   <h4 class="card-title">How the color system works</h4>
                   <p class="card-text">From color roles and accessible tone pairs to dynamic color, learn how color works in Material</p>
                 </div>
               </div>
-              <div class="card col p-0 text text-body-emphasis bg-secondary-subtle rounded-4 border-0">
+              <div class="card col p-0 text text-body-emphasis bg-secondary rounded-4 border-0">
                 <img src="./assets/img/icons.png" class="card-img-top rounded-4" alt="Material Design image" />
                 <div class="card-body px-4 pb-5">
                   <h4 class="card-title">Using Material icons</h4>
@@ -234,13 +238,13 @@
           <h2 class="h1 mb-4">Resources</h2>
           <div class="d-flex flex-column gap-2">
             <div class="row d-flex gap-2">
-              <div class="card col p-0 text text-body-emphasis bg-secondary-subtle rounded-4 border-0">
+              <div class="card col p-0 text text-body-emphasis bg-secondary rounded-4 border-0">
                 <div class="card-body px-4 pb-5">
                   <h4 class="card-title">Material blog</h4>
                   <p class="card-text">News, tutorials, and inspiration from the Material team</p>
                 </div>
               </div>
-              <div class="card col p-0 text text-body-emphasis bg-secondary-subtle rounded-4 border-0">
+              <div class="card col p-0 text text-body-emphasis bg-secondary rounded-4 border-0">
                 <div class="card-body px-4 pb-5">
                   <h4 class="card-title">Figma design kit</h4>
                   <p class="card-text">Customizable styles and components to help you design with Material 3</p>
@@ -248,13 +252,13 @@
               </div>
             </div>
             <div class="row d-flex gap-2">
-              <div class="card col p-0 text text-body-emphasis bg-secondary-subtle rounded-4 border-0">
+              <div class="card col p-0 text text-body-emphasis bg-secondary rounded-4 border-0">
                 <div class="card-body px-4 pb-5">
                   <h4 class="card-title">Get started</h4>
                   <p class="card-text">Guides, videos, and tools to start building with Material</p>
                 </div>
               </div>
-              <div class="card col p-0 text text-body-emphasis bg-secondary-subtle rounded-4 border-0">
+              <div class="card col p-0 text text-body-emphasis bg-secondary rounded-4 border-0">
                 <div class="card-body px-4 pb-5">
                   <h4 class="card-title">Develop</h4>
                   <p class="card-text">Code and developer documentation for building with Material</p>
@@ -293,38 +297,38 @@
           </div>
           <div class="col w-auto">
             <ul class="list-group d-flex flex-column gap-2 fw-semibold">
-              <li class="list-group-item text-secondary">Social</li>
-              <li class="list-group-item"><a href="" class="link-primary">GitHub</a></li>
-              <li class="list-group-item"><a href="" class="link-primary">Twitter</a></li>
-              <li class="list-group-item"><a href="" class="link-primary">Youtube</a></li>
-              <li class="list-group-item"><a href="" class="link-primary">Blog RSS</a></li>
+              <li class="list-group-item text-success">Social</li>
+              <li class="list-group-item"><a href="" class="text-warning">GitHub</a></li>
+              <li class="list-group-item"><a href="" class="link-warning">Twitter</a></li>
+              <li class="list-group-item"><a href="" class="link-warning">Youtube</a></li>
+              <li class="list-group-item"><a href="" class="link-warning">Blog RSS</a></li>
             </ul>
           </div>
           <div class="col w-auto">
             <ul class="list-group d-flex flex-column gap-2 fw-semibold">
-              <li class="list-group-item text-secondary">Libraries</li>
-              <li class="list-group-item"><a href="" class="link-primary">Android</a></li>
-              <li class="list-group-item"><a href="" class="link-primary">Compose</a></li>
-              <li class="list-group-item"><a href="" class="link-primary">Flutter</a></li>
-              <li class="list-group-item"><a href="" class="link-primary">Web</a></li>
+              <li class="list-group-item text-success">Libraries</li>
+              <li class="list-group-item"><a href="" class="link-warning">Android</a></li>
+              <li class="list-group-item"><a href="" class="link-warning">Compose</a></li>
+              <li class="list-group-item"><a href="" class="link-warning">Flutter</a></li>
+              <li class="list-group-item"><a href="" class="link-warning">Web</a></li>
             </ul>
           </div>
           <div class="col w-auto">
             <ul class="list-group d-flex flex-column gap-2 fw-semibold">
-              <li class="list-group-item text-secondary">Archived versions</li>
-              <li class="list-group-item"><a href="" class="link-primary">Material Design 1</a></li>
-              <li class="list-group-item"><a href="" class="link-primary">Material Design 2</a></li>
+              <li class="list-group-item text-success">Archived versions</li>
+              <li class="list-group-item"><a href="" class="link-warning">Material Design 1</a></li>
+              <li class="list-group-item"><a href="" class="link-warning">Material Design 2</a></li>
             </ul>
           </div>
         </div>
-        <div class="row w-75 mx-auto my-5 px-5">
+        <div class="row mx-auto my-5 px-5">
           <div class="col ms-4 pt-3 text text-body-emphasis">
             <ul class="list-group d-flex flex-row gap-3 fw-semibold">
-              <li class="list-group-item"><a href="" class="link-dark">Google</a></li>
-              <li class="list-group-item"><a href="" class="link-dark">Privacy Policy </a></li>
-              <li class="list-group-item"><a href="" class="link-dark">Terms of Service</a></li>
-              <li class="list-group-item"><a href="" class="link-dark">Join research studies</a></li>
-              <li class="list-group-item"><a href="" class="link-dark">Feedback</a></li>
+              <li class="list-group-item"><a href="" class="text-success">Google</a></li>
+              <li class="list-group-item"><a href="" class="text-success">Privacy Policy </a></li>
+              <li class="list-group-item"><a href="" class="text-success">Terms of Service</a></li>
+              <li class="list-group-item"><a href="" class="text-success">Join research studies</a></li>
+              <li class="list-group-item"><a href="" class="text-success">Feedback</a></li>
             </ul>
           </div>
         </div>

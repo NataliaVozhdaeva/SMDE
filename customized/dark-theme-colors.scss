@@ -1,0 +1,46 @@
+@use 'sass:map';
+@import '../bootstrap/scss/bootstrap.scss';
+
+@include color-mode(dark) {
+  $brand-theme-colors: (
+    'primary': #141314,
+    'secondary': #1c1b1d,
+    'success': #bbfcba,
+    'danger': #fcbad3,
+    'warning': #9f86ff,
+    'info': #553f5d,
+  );
+
+  $primary: map.get($brand-theme-colors, 'primary');
+  $secondary: map.get($brand-theme-colors, 'secondary');
+  $success: map.get($brand-theme-colors, 'success');
+  $info: map.get($brand-theme-colors, 'info');
+  $warning: map.get($brand-theme-colors, 'warning');
+  $danger: map.get($brand-theme-colors, 'danger');
+
+  $theme-colors: (
+    'primary': $primary,
+    'secondary': $secondary,
+    'success': $success,
+    'danger': $danger,
+    'warning': $warning,
+    'info': $info,
+  );
+
+  $theme-colors-rgb: (
+    'primary': to-rgb($primary),
+    'secondary': to-rgb($secondary),
+    'success': to-rgb($success),
+    'danger': to-rgb($danger),
+    'warning': to-rgb($warning),
+    'info': to-rgb($info),
+  );
+
+  @each $color, $value in $theme-colors {
+    --#{$prefix}#{$color}: #{$value};
+  }
+
+  @each $color, $value in $theme-colors-rgb {
+    --#{$prefix}#{$color}-rgb: #{$value};
+  }
+}

@@ -1,21 +1,7 @@
-// $success: #553f5d;
-// $active-bg-custom: #45455a;
-// $primary: #9f86ff;
-// $card-hover: #45455a;
-// $bg-dark: #f2ecee;
-
 $nav-link-font-size: 0.7rem;
-
 $list-group-bg: none;
 $list-group-border-color: none;
-
 $link-decoration: none;
-
-$primary: #6442d6;
-$secondary-bg-subtle: #f2ecee;
-$success: #f1d3f9;
-$active-bg-custom: #dcdaf5;
-$button-bg-hover: darken($secondary-bg-subtle, 5%);
 
 @mixin link-active-custom {
   font-weight: bold;
@@ -31,11 +17,13 @@ $button-bg-hover: darken($secondary-bg-subtle, 5%);
   padding: 0;
 }
 
+@import './light-theme-colors.scss';
 @import '../bootstrap/scss/bootstrap.scss';
+@import './dark-theme-colors.scss';
 
 .navbar-nav .nav-link.active span,
 .nav-link.active:hover span {
-  background-color: $active-bg-custom;
+  background-color: $marker;
 }
 
 .navbar-nav .nav-link.active {
@@ -45,19 +33,19 @@ $button-bg-hover: darken($secondary-bg-subtle, 5%);
 .navbar-nav .nav-link:not(.active):hover span,
 .navbar-nav .nav-link:not(.active) span:hover,
 .dropdown-item span:hover {
-  background-color: $button-bg-hover;
+  background-color: $nav-hover;
 }
 
-nav .btn {
+nav > .btn {
   position: relative;
-  // color: $gray-500;
+  border: 1px solid gray;
 }
 
 nav .btn:hover {
   font-weight: bold;
   font-variation-settings: 'FILL' 1, 'wght' 600, 'opsz' 24;
   color: $gray-700;
-  background-color: $button-bg-hover;
+  background-color: $nav-hover;
 }
 
 #logo {
@@ -97,42 +85,26 @@ details[open] summary span:after {
   font-weight: $nav-link-font-weight;
 }
 
-.dropdown-item:hover,
-.dropdown-item:focus {
-  background-color: $gray-900;
-}
-
 h1.fs-0 {
   font-size: $h0-font-size;
 }
 
-.btn-primary:hover {
-  background-color: lighten($primary, 3%);
+header .btn:hover {
+  background-color: lighten($warning, 3%);
 }
 
 .card:hover {
-  background-color: $active-bg-custom !important;
+  background-color: $marker !important;
   cursor: pointer;
 }
 
-// .bg-dark.card:hover {
-//   background-color: $card-hover !important;
-//   cursor: pointer;
-// }
-
-.link-light,
-.link-primar {
-  text-decoration: none;
+.card:focus-visible {
+  outline-color: black !important;
+  border-radius: 15% !important;
+  overflow: hidden;
 }
 
-// .link-light:hover,
-// .link-primary:hover {
-//   color: $white !important;
-//   text-decoration: underline !important;
-//   text-decoration-color: $white !important;
-// }
-
-.list-group-item:hover {
+.list-group-item:not(.text-secondary):hover {
   text-decoration: underline;
   text-decoration-color: currentColor;
 }
