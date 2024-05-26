@@ -41,22 +41,27 @@ videoBtnsContainer.addEventListener('click', function videoToggler(e) {
 
 //dark-mode
 
+const bodyEl = document.querySelector('body');
 const themeBtn = document.querySelector('button[data-theme="theme"]');
-
-// console.log(themeBtn);
+bodyEl.style.setProperty('--custom-marker', '#dcdaf5');
+bodyEl.style.setProperty('--custom-nav-hover', '#e5dee2');
 
 themeBtn.addEventListener('click', function themeToggler() {
   const currentTheme = themeBtn.querySelector('span:not(.d-none)');
   const nextTheme = themeBtn.querySelector('span.d-none');
 
   if (currentTheme.dataset.theme === 'toDark') {
-    // console.log('toDark');
-    document.querySelector('body').setAttribute('data-bs-theme', 'dark');
+    bodyEl.style.setProperty('--custom-marker', '#45455a');
+    bodyEl.style.setProperty('--custom-nav-hover', '#2f2c2f');
+
+    bodyEl.setAttribute('data-bs-theme', 'dark');
     currentTheme.classList.toggle('d-none');
     nextTheme.classList.toggle('d-none');
   } else {
-    // console.log('toLight');
-    document.querySelector('body').setAttribute('data-bs-theme', 'light');
+    bodyEl.style.setProperty('--custom-marker', '#dcdaf5');
+    bodyEl.style.setProperty('--custom-nav-hover', '#e5dee2');
+
+    bodyEl.setAttribute('data-bs-theme', 'light');
     currentTheme.classList.toggle('d-none');
     nextTheme.classList.toggle('d-none');
   }

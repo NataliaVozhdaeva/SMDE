@@ -13,16 +13,3 @@ $secondary: map.get($custom-theme-colors, 'secondary');
 $warning: map.get($custom-theme-colors, 'warning');
 $info: map.get($custom-theme-colors, 'info');
 $success: map.get($custom-theme-colors, 'success');
-
-@import '../bootstrap/scss/functions';
-@import '../bootstrap/scss/variables';
-
-$additional-colors: (
-  'marker': #dcdaf5,
-  'nav-hover': #e5dee2,
-);
-
-$custom-theme-colors: map-merge($additional-colors, $custom-theme-colors);
-
-$marker: map.get($custom-theme-colors, 'marker');
-$nav-hover: map.get($custom-theme-colors, 'nav-hover');

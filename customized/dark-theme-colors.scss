@@ -2,21 +2,21 @@
 @import '../bootstrap/scss/bootstrap.scss';
 
 @include color-mode(dark) {
-  $brand-theme-colors: (
+  $dark-theme-colors: (
     'primary': #141314,
     'secondary': #1c1b1d,
-    'success': #bbfcba,
+    'success': #cbc4cc,
     'danger': #fcbad3,
     'warning': #9f86ff,
     'info': #553f5d,
   );
 
-  $primary: map.get($brand-theme-colors, 'primary');
-  $secondary: map.get($brand-theme-colors, 'secondary');
-  $success: map.get($brand-theme-colors, 'success');
-  $info: map.get($brand-theme-colors, 'info');
-  $warning: map.get($brand-theme-colors, 'warning');
-  $danger: map.get($brand-theme-colors, 'danger');
+  $primary: map.get($dark-theme-colors, 'primary');
+  $secondary: map.get($dark-theme-colors, 'secondary');
+  $success: map.get($dark-theme-colors, 'success');
+  $info: map.get($dark-theme-colors, 'info');
+  $warning: map.get($dark-theme-colors, 'warning');
+  $danger: map.get($dark-theme-colors, 'danger');
 
   $theme-colors: (
     'primary': $primary,

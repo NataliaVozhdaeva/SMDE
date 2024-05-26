@@ -12,18 +12,27 @@ $link-decoration: none;
   top: 0;
   left: 100%;
 }
-
-@mixin zero-padding {
-  padding: 0;
-}
-
 @import './light-theme-colors.scss';
 @import '../bootstrap/scss/bootstrap.scss';
 @import './dark-theme-colors.scss';
 
+$custom-marker: var(--custom-marker);
+$custom-nav-hover: var(--custom-nav-hover);
+
+/* $theme: var(--theme);
+
+$marker: #dcdaf5;
+$nav-hover: #e5dee2;
+
+$dark-marker: #45455a;
+$dark-nav-hover: #2f2c2f;
+
+$custom-marker: if($theme == 'light', $marker, $dark-marker);
+$custom-nav-hover: if($theme == 'light', $nav-hover, $dark-nav-hover); */
+
 .navbar-nav .nav-link.active span,
 .nav-link.active:hover span {
-  background-color: $marker;
+  background-color: $custom-marker;
 }
 
 .navbar-nav .nav-link.active {
@@ -33,7 +42,7 @@ $link-decoration: none;
 .navbar-nav .nav-link:not(.active):hover span,
 .navbar-nav .nav-link:not(.active) span:hover,
 .dropdown-item span:hover {
-  background-color: $nav-hover;
+  background-color: $custom-nav-hover;
 }
 
 nav > .btn {
@@ -45,7 +54,7 @@ nav .btn:hover {
   font-weight: bold;
   font-variation-settings: 'FILL' 1, 'wght' 600, 'opsz' 24;
   color: $gray-700;
-  background-color: $nav-hover;
+  background-color: $custom-nav-hover;
 }
 
 #logo {
@@ -60,10 +69,6 @@ nav .btn:hover {
   position: absolute;
   display: block;
   @include dropdown-right();
-}
-
-details {
-  @include zero-padding();
 }
 
 summary {
@@ -94,7 +99,7 @@ header .btn:hover {
 }
 
 .card:hover {
-  background-color: $marker !important;
+  background-color: $custom-marker !important;
   cursor: pointer;
 }
 
@@ -104,7 +109,8 @@ header .btn:hover {
   overflow: hidden;
 }
 
-.list-group-item:not(.text-secondary):hover {
+.list-group-item:not(.text-success) a:hover {
   text-decoration: underline;
   text-decoration-color: currentColor;
+  color: lighten($warning, 50%) !important;
 }
